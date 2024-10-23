@@ -8,6 +8,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style/css/custom-bootstrap.css" />
 	<link rel="icon" href="favicon.ico"/>
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ageConfirmed = confirm("Avez-vous 18 ans ou plus ?");
+
+            if (!ageConfirmed) {
+                const cocktailsLink = document.querySelector('a[href="Cocktails.html"]');
+                if (cocktailsLink) {
+                    cocktailsLink.parentElement.style.display = "none";
+                }
+            }
+        });
+    </script>
 </head> 
 
 <body  style="background-color: #95AAC3;">
@@ -32,7 +44,7 @@
 							<a class="nav-link" href="Desserts.html">Desserts</a>
 							</li>
 							<li class="nav-item">
-							<a class="nav-link active" href="Cocktails.html">Cocktail</a>
+							<a class="nav-link active" href="Cocktails.html">Cocktails</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link active" href="Nous_joindre.html">Nous joindre</a>
